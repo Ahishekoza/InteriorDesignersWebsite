@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.icon {
+  @apply text-white bg-dark-green p-1 rounded-md   md:text-2xl lg:text-3xl cursor-pointer;
+}
+.icon_project {
+  @apply text-white bg-dark-green p-1 rounded-md   md:text-2xl lg:text-4xl cursor-pointer;
+}
+
+.projectNumbers {
+  @apply text-3xl md:text-4xl lg:text-5xl  font-semibold;
+}
+
+.projectCompletionNotes {
+  @apply text-sm md:text-xs lg:text-base;
+}
+
+.scrollbarUnderline {
+  @apply absolute w-0 group-hover:w-full  transition-all duration-300 -bottom-4 bg-mango-orange h-1;
+}
+
+.scrollbarUnderline_project {
+  @apply absolute w-full -bottom-5 bg-mango-orange h-1;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2d322c; /* Scrollbar color */
+  border-radius: 6px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Background color */
+  border-radius: 6px; /* Rounded edges for track */
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: #2d322c #ffffff; /* Thumb color, Track color */
+  scrollbar-width: thin; /* Thin scrollbar */
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
