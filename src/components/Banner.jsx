@@ -1,6 +1,10 @@
 import PremiumPhoto from "../assets/premium_photo-.avif";
 import { Button } from "./ui/button";
 const Banner = () => {
+  const handleScrollToContact = () => {
+    const contactus = document.getElementById("contactUs")
+    if (contactus) contactus.scrollIntoView({behavior:"smooth"});
+  }
   return (
     <section id="home" className="flex flex-col-reverse sm:flex-row w-full h-full bg-dark-green font-montserrat">
       <div className=" w-full sm:w-1/3 ">
@@ -16,7 +20,7 @@ const Banner = () => {
             hic quasi voluptates facere minus ipsum? Consequuntur velit rem
           </p>
           {/* --button */}
-          <Button className="bg-mango-orange text-white py-2 rounded-lg">
+          <Button onClick={handleScrollToContact} className="bg-mango-orange text-white py-2 rounded-lg">
             Request Consulation
           </Button>
         </div>

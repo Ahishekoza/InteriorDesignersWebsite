@@ -3,8 +3,8 @@ const Footer = () => {
     <footer id="contactUs" className="bg-white lg:grid lg:grid-cols-5">
       <div className="relative block h-64 lg:col-span-2 lg:h-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.12442276326!2d73.85960207465116!3d18.478022470473583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb6082918afd%3A0x31322a8aeff0830b!2sUsha%20Agencies%20Pune(Vyas%20Electronics)!5e0!3m2!1sen!2sjp!4v1734939635988!5m2!1sen!2sjp"
-          allowfullscreen=""
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.124367587443!2d73.8595717746512!3d18.47802497047356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebc08ee10775%3A0x2e832b7627dfda08!2sInnova%20Interior%20Designers%20And%20Consultants!5e0!3m2!1sen!2sjp!4v1735550146281!5m2!1sen!2sjp"
+          allowFullScreen
           loading="lazy"
           className=" absolute inset-0 h-full w-full"
         ></iframe>

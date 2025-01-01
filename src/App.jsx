@@ -12,11 +12,11 @@ function App() {
   const pageVariants = {
     initial: {
       opacity: 0,
-    // Slide in from the left
+      // Slide in from the left
     },
     animate: {
       opacity: 1,
-       // Center position
+      // Center position
       transition: {
         duration: 0.5, // Smooth transition duration
       },
@@ -31,8 +31,23 @@ function App() {
   };
 
   return (
-    <AnimatePresence mode="wait"> {/* Ensures only one route is rendered at a time */}
+    <AnimatePresence mode="wait">
+      {" "}
+      {/* Ensures only one route is rendered at a time */}
       <Routes location={location} key={location.pathname}>
+        {/* <Route
+          path="/"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit={"exit"}
+            >
+              <LandingPage />
+            </motion.div>
+          }
+        /> */}
         <Route
           path="/"
           element={

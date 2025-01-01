@@ -1,10 +1,11 @@
-import { IoMenu } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
   const projectHeader =
     location.pathname.split("/").includes("projects") ||
@@ -17,17 +18,52 @@ const Header = () => {
     { id: 4, link: "#contactUs", item: "ContactUs" },
   ];
 
-  const getActiveClass = (path) => {
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  // --- useEffect is needed so that we can clean previous EventListener
+  useEffect(() => {
+    // -- will fire the event when window will resize
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // const getActiveClass = (path) => {
+  //   if (path === "/") {
+  //     return "text-white";
+  //   }
+
+  //   if (path.startsWith("#")) {
+  //     return window.location.hash === path ? "text-mango-orange" : "text-white";
+  //   } else {
+  //     return location.pathname === path ? "text-mango-orange" : "text-white";
+  //   }
+  // };
+
+  const getActiveClassUnderLine = (path) => {
     if (path === "/") {
-      return "text-white";
+      return "";
     }
 
     if (path.startsWith("#")) {
-      return window.location.hash === path ? "text-mango-orange" : "text-white";
+      return window.location.hash === path
+        ? windowWidth <= 786
+          ? "absolute w-full bg-mango-orange h-1 -bottom-3"
+          : "absolute w-full bg-mango-orange h-1 -bottom-4"
+        : "";
     } else {
-      return location.pathname === path ? "text-mango-orange" : "text-white";
+      return location.pathname === path
+        ? windowWidth <= 786
+          ? "absolute w-full bg-mango-orange h-1 -bottom-4"
+          : "absolute w-full bg-mango-orange h-1 -bottom-5"
+        : "";
     }
   };
+
   const instaLink = "";
   const youtubeLink = "https://www.youtube.com/@innovainteriordesigners";
 
@@ -43,9 +79,6 @@ const Header = () => {
 
           {/* --- Menu Items */}
           <div className="hidden md:flex items-center gap-9  font-montserrat font-medium">
-            <div className="group relative flex flex-col">
-              {/* <span className="scrollbarUnderline_project"></span> */}
-            </div>
             {menuItems.map((menuItem) => {
               if (
                 menuItem.item === "AboutUs" ||
@@ -54,13 +87,15 @@ const Header = () => {
                 return "";
               } else {
                 return (
-                  <Link
+                  <div
                     key={menuItem.id}
-                    to={menuItem.link}
-                    className={` ${getActiveClass(menuItem.link)}`}
+                    className="group relative flex flex-col"
                   >
-                    {menuItem.item}
-                  </Link>
+                    <Link to={menuItem.link}>{menuItem.item}</Link>
+                    <span
+                      className={`${getActiveClassUnderLine(menuItem.link)}`}
+                    ></span>
+                  </div>
                 );
               }
             })}
@@ -98,20 +133,24 @@ const Header = () => {
                 menuItem.item === "ContactUs"
               ) {
                 return (
-                  <a
-                    key={menuItem.id}
-                    href={menuItem.link}
-                    className={` ${getActiveClass(menuItem.link)}`}
+                  <div
+                    key={menuItem?.id}
+                    className="group relative flex flex-col"
                   >
-                    {menuItem.item}
-                  </a>
+                    <a key={menuItem.id} href={menuItem.link}>
+                      {menuItem.item}
+                    </a>
+                    <span
+                      className={`${getActiveClassUnderLine(menuItem.link)}`}
+                    ></span>
+                  </div>
                 );
               } else {
                 return (
                   <Link
                     key={menuItem.id}
                     to={menuItem.link}
-                    className={` ${getActiveClass(menuItem.link)}`}
+                    className={`${getActiveClassUnderLine(menuItem.link)} `}
                   >
                     {menuItem.item}
                   </Link>

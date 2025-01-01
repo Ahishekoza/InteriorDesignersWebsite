@@ -28,7 +28,7 @@ html {
 }
 
 .scrollbarUnderline {
-  @apply absolute w-0 group-hover:w-full  transition-all duration-300 -bottom-4 bg-mango-orange h-1;
+  @apply absolute w-full    -bottom-4 bg-mango-orange h-1;
 }
 
 .scrollbarUnderline_project {
