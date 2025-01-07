@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-import textFillStroke from 'tailwindcss-text-fill-stroke';
+// import textFillStroke from 'tailwindcss-text-fill-stroke';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -40,5 +40,5 @@ export default {
   	}
   },
   // eslint-disable-next-line no-undef
-  plugins: [textFillStroke, require("tailwindcss-animate")],
+//   plugins: [textFillStroke, require("tailwindcss-animate")],
 };
