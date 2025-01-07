@@ -8,47 +8,47 @@ import {
 } from "../components/ui/sheet";
 import { Link } from "react-router-dom";
 import MobileNavStyle from "./MobileNavStyle";
+import { useState } from "react";
+
 const MobileMenu = () => {
+  // State to manage whether the sheet is open
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeSheet = () => setIsOpen(false);
+
   return (
-    <Sheet>
-      <SheetTrigger>
-        <IoMenu className="block cursor-pointer text-3xl  md:hidden font-extrabold" />
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger onClick={() => setIsOpen(true)}>
+        <IoMenu className="block cursor-pointer text-3xl md:hidden font-extrabold" />
       </SheetTrigger>
-      <SheetContent className="bg-dark-green/90 text-white">
+      <SheetContent
+        className="bg-dark-green/90 text-white"
+        onClick={() => setIsOpen(false)} // Close the sheet when clicking outside
+      >
         <SheetHeader>
           <SheetTitle className="text-left font-orbitron tracking-widest">
             INNOVA INTERIORS
           </SheetTitle>
         </SheetHeader>
-        {/* The issue with the padding in the y-direction not being applied correctly likely arises from the absolute positioning of the background span (absolute inset-0) overlapping the padding */}
-        {/* Adding block to the Link ensures it behaves like a block element, allowing py-2 to create vertical padding. */}
         <div className="my-10 flex flex-col gap-6 text-md font-montserrat">
           <MobileNavStyle>
             <Link
               to={"/"}
+              onClick={closeSheet} // Close the sheet after clicking this link
               className="relative block px-2 py-1 group-hover:text-dark-green z-10 group-hover:font-semibold text-white transition-colors duration-300"
             >
               Home
             </Link>
           </MobileNavStyle>
-          {/* <MobileNavStyle>
-            <a
-              href="#aboutUs"
-              className="relative block px-2 py-1 group-hover:text-dark-green z-10 group-hover:font-semibold text-white transition-colors duration-300"
-            >
-              About Us
-            </a>
-          </MobileNavStyle> */}
           <MobileNavStyle>
             <Link
               to={"/projects"}
+              onClick={closeSheet} // Close the sheet after clicking this link
               className="relative block px-2 py-1 group-hover:text-dark-green z-10 group-hover:font-semibold text-white transition-colors duration-300"
             >
               Projects
             </Link>
           </MobileNavStyle>
-
-          {/* <span>Contact Us</span> */}
         </div>
       </SheetContent>
     </Sheet>
