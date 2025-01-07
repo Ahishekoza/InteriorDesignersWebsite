@@ -39,5 +39,6 @@ export default {
   		colors: {}
   	}
   },
+  // eslint-disable-next-line no-undef
   plugins: [textFillStroke, require("tailwindcss-animate")],
 };
