@@ -6,6 +6,7 @@ import {
   CarouselPrevious,
 } from "../components/ui/carousel";
 import { Card, CardContent } from "../components/ui/card";
+import PremiumPhoto from "../assets/premium_photo-.avif";
 const Reviews = () => {
   return (
     <section id="#" className="w-full h-full my-16 ">
@@ -34,7 +35,7 @@ const Reviews = () => {
                       <CardContent className="w-full    lg:h-[300px] h-[350px] relative p-5">
                         <div className="flex flex-col gap-3 font-montserrat text-dark-green">
                           <div className="flex flex-row gap-10 items-center">
-                            <img src="/src/assets/premium_photo-.avif" className=" size-28 rounded-full object-cover" />
+                            <img src={PremiumPhoto} className=" size-28 rounded-full object-cover" />
                             <div className="flex  flex-col ">
                               <span className="text-lg font-orbitron ">Name</span>
                               <span className="text-md font-light">Profession</span>
