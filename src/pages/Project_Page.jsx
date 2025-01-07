@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "../components/ui/card";
 import { MdArrowOutward } from "react-icons/md";
+import PremiumPhoto from "../assets/premium_photo-.avif";
 
 // @TODO:-- Add border none
 // @TODO:- create an array of objects for interior site samples
@@ -33,7 +34,7 @@ const ProjectPage = () => {
             <CardContent className="w-full h-[300px] relative p-0 rounded-md">
               <div className="relative overflow-hidden  w-full h-full group">
                 <img
-                  src={"/src/assets/premium_photo-.avif"}
+                  src={PremiumPhoto}
                   className="w-full h-full object-cover rounded-md"
                 />
                 {/* Dark-opacity background on hover */}
@@ -52,7 +53,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -70,7 +71,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -88,7 +89,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -106,7 +107,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -124,7 +125,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -142,7 +143,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -160,7 +161,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -178,7 +179,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -196,7 +197,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -214,7 +215,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}
@@ -232,7 +233,7 @@ const ProjectPage = () => {
           <CardContent className="w-full h-[300px] relative p-0 rounded-md">
             <div className="relative overflow-hidden  w-full h-full group">
               <img
-                src={"/src/assets/premium_photo-.avif"}
+                src={PremiumPhoto}
                 className="w-full h-full object-cover rounded-md"
               />
               {/* Dark-opacity background on hover */}

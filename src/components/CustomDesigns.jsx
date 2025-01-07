@@ -11,6 +11,7 @@ import { Card, CardContent } from "../components/ui/card";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import { Button } from "./ui/button";
+import PremiumPhoto from "../assets/premium_photo-.avif";
 
 const CustomDesigns = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ const CustomDesigns = () => {
       title: "Skinny Jeans Blue",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sequi dicta impedit aperiam ipsum!",
-      thumbnail: "/src/assets/premium_photo-.avif",
+      thumbnail: PremiumPhoto,
       videoUrl: "https://youtu.be/ankZH1XgJuQ?si=YARX2UfYrJFSaL9c",
     },
     {
@@ -32,7 +33,7 @@ const CustomDesigns = () => {
       title: "Classic Denim Jacket",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo quidem reprehenderit quibusdam.",
-      thumbnail: "/src/assets/premium_photo-.avif",
+      thumbnail: PremiumPhoto,
       videoUrl: "https://youtu.be/Qe4s3M9ax7A?si=FziEuEsjPBPodQAc",
     },
     {
@@ -40,7 +41,7 @@ const CustomDesigns = () => {
       title: "Classic Denim Jacket",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo quidem reprehenderit quibusdam.",
-      thumbnail: "/src/assets/premium_photo-.avif",
+      thumbnail: PremiumPhoto,
       videoUrl: "https://youtu.be/Qe4s3M9ax7A?si=FziEuEsjPBPodQAc",
     },
     {
@@ -48,7 +49,7 @@ const CustomDesigns = () => {
       title: "Classic Denim Jacket",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo quidem reprehenderit quibusdam.",
-      thumbnail: "/src/assets/premium_photo-.avif",
+      thumbnail: PremiumPhoto,
       videoUrl: "https://youtu.be/Qe4s3M9ax7A?si=FziEuEsjPBPodQAc",
     },
     {
@@ -56,7 +57,7 @@ const CustomDesigns = () => {
       title: "Classic Denim Jacket",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo quidem reprehenderit quibusdam.",
-      thumbnail: "/src/assets/premium_photo-.avif",
+      thumbnail: PremiumPhoto,
       videoUrl: "https://youtu.be/Qe4s3M9ax7A?si=FziEuEsjPBPodQAc",
     },
     // Add more video objects here

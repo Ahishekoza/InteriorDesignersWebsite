@@ -8,6 +8,7 @@ import {
 } from "../components/ui/carousel";
 // import Autoplay from "embla-carousel-autoplay"
 import { Separator } from "./ui/separator";
+import PremiumPhoto from "../assets/premium_photo-.avif";
 
 // @TODO:- Add Autoplay
 const SingleInterior = () => {
@@ -24,7 +25,7 @@ const SingleInterior = () => {
                       <CardContent className="w-full h-[300px] md:h-[500px]  p-0 rounded-md">
                         <div className=" overflow-hidden w-full h-full group">
                           <img
-                            src={"/src/assets/premium_photo-.avif"}
+                            src={PremiumPhoto}
                             className="w-full h-full object-cover rounded-md"
                           />
                         </div>
