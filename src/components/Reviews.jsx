@@ -28,9 +28,6 @@ const Reviews = () => {
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem key={index} className=" sm:basis-1/2 ">
                   <div className="p-1">
-                    {/* Smaller Devices: ReactPlayer within Card */}
-
-                    {/* Larger Devices: Dialog for Video */}
                     <Card className="shadow-none border border-r-2 rounded-none border-l-0 border-b-0 border-t-0 border-dark-green ">
                       <CardContent className="w-full    lg:h-[300px] h-[350px] relative p-5">
                         <div className="flex flex-col gap-3 font-montserrat text-dark-green">

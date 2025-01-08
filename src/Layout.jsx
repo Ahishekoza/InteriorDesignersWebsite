@@ -26,7 +26,7 @@ const RemoteLayout = ({ children }) => {
   window.addEventListener("scroll", checkScrollYOffset);
 
   return (
-    <div>
+    <div className="scroll-smooth cursor-grab">
       <Header />
       {/* <Breadcrumb/> */}
       <main>{children}</main>
@@ -43,7 +43,7 @@ const RemoteLayout = ({ children }) => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-5"
+          className="size-6"
         >
           <path
             strokeLinecap="round"

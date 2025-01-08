@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "../components/ui/card";
 import { MdArrowOutward } from "react-icons/md";
 import PremiumPhoto from "../assets/premium_photo-.avif";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
 
 // @TODO:-- Add border none
 // @TODO:- create an array of objects for interior site samples
@@ -28,228 +35,152 @@ const ProjectPage = () => {
           PROJECT'S
         </span>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6  ">
-        <Link to={"/project/commerical"}>
-          <Card className=" cursor-pointer">
-            <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-              <div className="relative overflow-hidden  w-full h-full group">
-                <img
-                  src={PremiumPhoto}
-                  className="w-full h-full object-cover rounded-md"
-                />
-                {/* Dark-opacity background on hover */}
-                <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-                {/* Text content with slide-up effect */}
-                <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                  <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                    <span>View</span> <MdArrowOutward />
-                  </h3>
-                </div>
+
+      {/* Create a Separate Component */}
+      <div className="flex flex-col gap-5">
+
+        <div className="flex flex-col gap-4 ">
+          <span className="text-xl md:text-2xl font-montserrat font-medium">Commerical Project's</span>
+          <div>
+            <Carousel
+              opts={{
+                align: "start",
+              }}
+              className="w-full h-full"
+            >
+              <CarouselContent>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index} className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 ">
+                    <div className="p-1">
+                      <Link to={"/project/commerical"}>
+                        <Card className=" cursor-pointer">
+                          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
+                            <div className="relative overflow-hidden  w-full h-full group">
+                              <img
+                                src={PremiumPhoto}
+                                className="w-full h-full object-cover rounded-md"
+                              />
+                              {/* Dark-opacity background on hover */}
+                              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
+                              {/* Text content with slide-up effect */}
+                              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
+                                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
+                                  <span>View</span> <MdArrowOutward />
+                                </h3>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="absolute md:right-20 right-11 -top-5">
+                <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
+                <CarouselNext className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
               </div>
-            </CardContent>
-          </Card>
-        </Link>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
+            </Carousel>
+          </div>
+
+        </div>
+
+        <div className="flex flex-col gap-4 ">
+          <span className="text-xl md:text-2xl font-montserrat font-medium">Commerical Project's</span>
+          <div>
+            <Carousel
+              opts={{
+                align: "start",
+              }}
+              className="w-full h-full"
+            >
+              <CarouselContent>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index} className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 ">
+                    <div className="p-1">
+                      <Link to={"/project/commerical"}>
+                        <Card className=" cursor-pointer">
+                          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
+                            <div className="relative overflow-hidden  w-full h-full group">
+                              <img
+                                src={PremiumPhoto}
+                                className="w-full h-full object-cover rounded-md"
+                              />
+                              {/* Dark-opacity background on hover */}
+                              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
+                              {/* Text content with slide-up effect */}
+                              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
+                                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
+                                  <span>View</span> <MdArrowOutward />
+                                </h3>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="absolute md:right-20 right-11 -top-5">
+                <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
+                <CarouselNext className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
               </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
+            </Carousel>
+          </div>
+
+        </div>
+
+        <div className="flex flex-col gap-4 ">
+          <span className="text-xl md:text-2xl font-montserrat font-medium">Commerical Project's</span>
+          <div>
+            <Carousel
+              opts={{
+                align: "start",
+              }}
+              className="w-full h-full"
+            >
+              <CarouselContent>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index} className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 ">
+                    <div className="p-1">
+                      <Link to={"/project/commerical"}>
+                        <Card className=" cursor-pointer">
+                          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
+                            <div className="relative overflow-hidden  w-full h-full group">
+                              <img
+                                src={PremiumPhoto}
+                                className="w-full h-full object-cover rounded-md"
+                              />
+                              {/* Dark-opacity background on hover */}
+                              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
+                              {/* Text content with slide-up effect */}
+                              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
+                                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
+                                  <span>View</span> <MdArrowOutward />
+                                </h3>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="absolute md:right-20 right-11 -top-5">
+                <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
+                <CarouselNext className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
               </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className=" cursor-pointer">
-          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-            <div className="relative overflow-hidden  w-full h-full group">
-              <img
-                src={PremiumPhoto}
-                className="w-full h-full object-cover rounded-md"
-              />
-              {/* Dark-opacity background on hover */}
-              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-              {/* Text content with slide-up effect */}
-              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                  <span>View</span> <MdArrowOutward />
-                </h3>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </Carousel>
+          </div>
+
+        </div>
+
       </div>
     </div>
   );
 };
 
 export default ProjectPage;
+
