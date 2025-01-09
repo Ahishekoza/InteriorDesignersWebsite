@@ -3,9 +3,23 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 
 const RemoteLayout = ({ children }) => {
   const [showScrollArrow, setShowScrollArrow] = useState(false);
+
+  const { scrollY } = useScroll();
+  const smoothScroll = useSpring(scrollY, {
+    stiffness: 80, // Control stiffness
+    damping:30, // Control dampness
+  });
+
+  // Transform scroll velocity to control dynamic properties
+  const yOffset = useTransform(
+    smoothScroll,
+    [0, window.innerHeight],
+    [0, -100]
+  );
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -16,7 +30,7 @@ const RemoteLayout = ({ children }) => {
 
   const checkScrollYOffset = () => {
     // console.log("width:", window.innerWidth,"height:", window.innerHeight*0.75);
-    if (window.pageYOffset >= window.innerHeight*0.4) {
+    if (window.pageYOffset >= window.innerHeight * 0.4) {
       setShowScrollArrow(true);
     } else {
       setShowScrollArrow(false);
@@ -26,7 +40,12 @@ const RemoteLayout = ({ children }) => {
   window.addEventListener("scroll", checkScrollYOffset);
 
   return (
-    <div className="scroll-smooth cursor-grab">
+    <div
+      className="scroll-smooth cursor-grab"
+      style={{
+        y: yOffset, // Apply smooth scroll
+      }}
+    >
       <Header />
       {/* <Breadcrumb/> */}
       <main>{children}</main>
@@ -35,7 +54,7 @@ const RemoteLayout = ({ children }) => {
       <button
         onClick={handleScrollToTop}
         className="fixed bottom-14 right-1 bg-dark-green hover:bg-dark-green/85 transition-all duration-150 text-white cursor-pointer p-1 rounded-full shadow-md"
-        style={{display: showScrollArrow ? 'block' : 'none'}}
+        style={{ display: showScrollArrow ? "block" : "none" }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

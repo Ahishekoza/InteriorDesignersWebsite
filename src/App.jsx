@@ -18,14 +18,14 @@ function App() {
       opacity: 1,
       // Center position
       transition: {
-        duration: 0.5, // Smooth transition duration
+        duration: 0.4, // Smooth transition duration
       },
     },
     exit: {
       opacity: 0,
       // Slide out to the right
       transition: {
-        duration: 0.5, // Smooth exit transition
+        duration: 0.4, // Smooth exit transition
       },
     },
   };

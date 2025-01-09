@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Card, CardContent } from "../components/ui/card";
+import { data, Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import PremiumPhoto from "../assets/premium_photo-.avif";
 import {
@@ -9,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
+import CommonCard from "../components/CommonCard";
 
 // @TODO:-- Add border none
 // @TODO:- create an array of objects for interior site samples
@@ -38,9 +38,10 @@ const ProjectPage = () => {
 
       {/* Create a Separate Component */}
       <div className="flex flex-col gap-5">
-
         <div className="flex flex-col gap-4 ">
-          <span className="text-xl md:text-2xl font-montserrat font-medium">Commerical Project's</span>
+          <span className="text-xl md:text-2xl font-montserrat font-medium">
+            Commerical Project's
+          </span>
           <div>
             <Carousel
               opts={{
@@ -50,27 +51,28 @@ const ProjectPage = () => {
             >
               <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 ">
+                  <CarouselItem
+                    key={index}
+                    className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
+                  >
                     <div className="p-1">
                       <Link to={"/project/commerical"}>
-                        <Card className=" cursor-pointer">
-                          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-                            <div className="relative overflow-hidden  w-full h-full group">
-                              <img
-                                src={PremiumPhoto}
-                                className="w-full h-full object-cover rounded-md"
-                              />
-                              {/* Dark-opacity background on hover */}
-                              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-                              {/* Text content with slide-up effect */}
-                              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                                  <span>View</span> <MdArrowOutward />
-                                </h3>
-                              </div>
+                        <CommonCard>
+                          <div className="relative overflow-hidden  w-full h-full group">
+                            <img
+                              src={PremiumPhoto}
+                              className="w-full h-full object-cover rounded-md"
+                            />
+                            {/* Dark-opacity background on hover */}
+                            <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
+                            {/* Text content with slide-up effect */}
+                            <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
+                              <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
+                                <span>View</span> <MdArrowOutward />
+                              </h3>
                             </div>
-                          </CardContent>
-                        </Card>
+                          </div>
+                        </CommonCard>
                       </Link>
                     </div>
                   </CarouselItem>
@@ -82,11 +84,12 @@ const ProjectPage = () => {
               </div>
             </Carousel>
           </div>
-
         </div>
 
         <div className="flex flex-col gap-4 ">
-          <span className="text-xl md:text-2xl font-montserrat font-medium">Commerical Project's</span>
+          <span className="text-xl md:text-2xl font-montserrat font-medium">
+            Residentional Project's
+          </span>
           <div>
             <Carousel
               opts={{
@@ -96,27 +99,28 @@ const ProjectPage = () => {
             >
               <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 ">
+                  <CarouselItem
+                    key={index}
+                    className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
+                  >
                     <div className="p-1">
                       <Link to={"/project/commerical"}>
-                        <Card className=" cursor-pointer">
-                          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-                            <div className="relative overflow-hidden  w-full h-full group">
-                              <img
-                                src={PremiumPhoto}
-                                className="w-full h-full object-cover rounded-md"
-                              />
-                              {/* Dark-opacity background on hover */}
-                              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-                              {/* Text content with slide-up effect */}
-                              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                                  <span>View</span> <MdArrowOutward />
-                                </h3>
-                              </div>
+                        <CommonCard>
+                          <div className="relative overflow-hidden  w-full h-full group">
+                            <img
+                              src={PremiumPhoto}
+                              className="w-full h-full object-cover rounded-md"
+                            />
+                            {/* Dark-opacity background on hover */}
+                            <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
+                            {/* Text content with slide-up effect */}
+                            <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
+                              <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
+                                <span>View</span> <MdArrowOutward />
+                              </h3>
                             </div>
-                          </CardContent>
-                        </Card>
+                          </div>
+                        </CommonCard>
                       </Link>
                     </div>
                   </CarouselItem>
@@ -128,11 +132,12 @@ const ProjectPage = () => {
               </div>
             </Carousel>
           </div>
-
         </div>
 
         <div className="flex flex-col gap-4 ">
-          <span className="text-xl md:text-2xl font-montserrat font-medium">Commerical Project's</span>
+          <span className="text-xl md:text-2xl font-montserrat font-medium">
+            Hospitality Project's
+          </span>
           <div>
             <Carousel
               opts={{
@@ -142,27 +147,29 @@ const ProjectPage = () => {
             >
               <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 ">
+                  <CarouselItem
+                    key={index}
+                    className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
+                  >
+                    {/* --Photo Links for the specific Project can be via state Prop in Link */}
                     <div className="p-1">
-                      <Link to={"/project/commerical"}>
-                        <Card className=" cursor-pointer">
-                          <CardContent className="w-full h-[300px] relative p-0 rounded-md">
-                            <div className="relative overflow-hidden  w-full h-full group">
-                              <img
-                                src={PremiumPhoto}
-                                className="w-full h-full object-cover rounded-md"
-                              />
-                              {/* Dark-opacity background on hover */}
-                              <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
-                              {/* Text content with slide-up effect */}
-                              <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
-                                <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
-                                  <span>View</span> <MdArrowOutward />
-                                </h3>
-                              </div>
+                      <Link to={"/project/commerical"} state={{data:["Abhishek","Somesh","Saniya"]}}>
+                        <CommonCard>
+                          <div className="relative overflow-hidden  w-full h-full group">
+                            <img
+                              src={PremiumPhoto}
+                              className="w-full h-full object-cover rounded-md"
+                            />
+                            {/* Dark-opacity background on hover */}
+                            <div className="absolute inset-0 bg-dark-green/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-md"></div>
+                            {/* Text content with slide-up effect */}
+                            <div className="absolute inset-0 translate-y-48 h-full group-hover:translate-y-0 z-10 font-montserrat flex flex-col items-center justify-center p-3 transition-transform duration-300">
+                              <h3 className="text-xl font-montserrat text-white flex items-center gap-1">
+                                <span>View</span> <MdArrowOutward />
+                              </h3>
                             </div>
-                          </CardContent>
-                        </Card>
+                          </div>
+                        </CommonCard>
                       </Link>
                     </div>
                   </CarouselItem>
@@ -174,13 +181,10 @@ const ProjectPage = () => {
               </div>
             </Carousel>
           </div>
-
         </div>
-
       </div>
     </div>
   );
 };
 
 export default ProjectPage;
-

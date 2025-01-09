@@ -7,6 +7,7 @@ import {
 } from "../components/ui/carousel";
 import { Card, CardContent } from "../components/ui/card";
 import PremiumPhoto from "../assets/premium_photo-.avif";
+import CommonCard from "./CommonCard";
 const Reviews = () => {
   return (
     <section id="#" className="w-full h-full my-16 ">
@@ -28,20 +29,33 @@ const Reviews = () => {
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem key={index} className=" sm:basis-1/2 ">
                   <div className="p-1">
-                    <Card className="shadow-none border border-r-2 rounded-none border-l-0 border-b-0 border-t-0 border-dark-green ">
-                      <CardContent className="w-full    lg:h-[300px] h-[350px] relative p-5">
-                        <div className="flex flex-col gap-3 font-montserrat text-dark-green">
-                          <div className="flex flex-row gap-10 items-center">
-                            <img src={PremiumPhoto} className=" size-28 rounded-full object-cover" />
-                            <div className="flex  flex-col ">
-                              <span className="text-lg font-orbitron ">Name</span>
-                              <span className="text-md font-light">Profession</span>
-                            </div>
+                    <CommonCard
+                      customClass={
+                        "shadow-none border border-r-2 rounded-none border-l-0 border-b-0 border-t-0 border-dark-green"
+                      }
+                      customContentClass={"lg:h-[300px] h-[350px] p-5"}
+                    >
+                      <div className="flex flex-col gap-3 font-montserrat text-dark-green">
+                        <div className="flex flex-row gap-10 items-center">
+                          <img
+                            src={PremiumPhoto}
+                            className=" size-28 rounded-full object-cover"
+                          />
+                          <div className="flex  flex-col ">
+                            <span className="text-lg font-orbitron ">Name</span>
+                            <span className="text-md font-light">
+                              Profession
+                            </span>
                           </div>
-                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quo eveniet nisi voluptates aperiam dolorum doloremque, ab labore, optio atque officia alias. A ut totam modi illo at, aperiam fugiat.</p>
                         </div>
-                      </CardContent>
-                    </Card>
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Quisquam quo eveniet nisi voluptates aperiam
+                          dolorum doloremque, ab labore, optio atque officia
+                          alias. A ut totam modi illo at, aperiam fugiat.
+                        </p>
+                      </div>
+                    </CommonCard>
                   </div>
                 </CarouselItem>
               ))}

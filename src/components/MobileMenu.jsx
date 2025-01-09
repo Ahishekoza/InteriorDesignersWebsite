@@ -26,7 +26,7 @@ const MobileMenu = () => {
         onClick={() => setIsOpen(false)} // Close the sheet when clicking outside
       >
         <SheetHeader>
-          <SheetTitle className="text-left font-orbitron tracking-widest">
+          <SheetTitle className="text-base md:text-xl text-left font-orbitron tracking-widest">
             INNOVA INTERIORS
           </SheetTitle>
         </SheetHeader>
