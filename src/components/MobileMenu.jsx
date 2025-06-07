@@ -12,21 +12,21 @@ import { useState } from "react";
 
 const MobileMenu = () => {
   // State to manage whether the sheet is open
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const closeSheet = () => setIsOpen(false);
+  // const closeSheet = () => setIsOpen(false);
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger onClick={() => setIsOpen(true)}>
+    <Sheet>
+      <SheetTrigger asChild>
         <IoMenu className="block cursor-pointer text-3xl md:hidden font-extrabold" />
       </SheetTrigger>
       <SheetContent
         className="bg-dark-green/90 text-white"
-        onClick={() => setIsOpen(false)} // Close the sheet when clicking outside
+        // Close the sheet when clicking outside
       >
         <SheetHeader>
-          <SheetTitle className="text-base md:text-xl text-left font-orbitron tracking-widest">
+          <SheetTitle className="text-base text-white md:text-xl text-left font-orbitron tracking-widest">
             INNOVA INTERIORS
           </SheetTitle>
         </SheetHeader>
@@ -34,7 +34,7 @@ const MobileMenu = () => {
           <MobileNavStyle>
             <Link
               to={"/"}
-              onClick={closeSheet} // Close the sheet after clicking this link
+              // Close the sheet after clicking this link
               className="relative block px-2 py-1 group-hover:text-dark-green z-10 group-hover:font-semibold text-white transition-colors duration-300"
             >
               Home
@@ -43,7 +43,7 @@ const MobileMenu = () => {
           <MobileNavStyle>
             <Link
               to={"/projects"}
-              onClick={closeSheet} // Close the sheet after clicking this link
+              // Close the sheet after clicking this link
               className="relative block px-2 py-1 group-hover:text-dark-green z-10 group-hover:font-semibold text-white transition-colors duration-300"
             >
               Projects

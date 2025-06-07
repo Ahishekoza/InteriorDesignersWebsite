@@ -43,7 +43,14 @@ export const customDesignContentLinks = [
   },
 ];
 
-export const commericalProjectsLinks = [{}];
+export const commericalProjectsLinks = [
+  { url: "commerical_1", photos: [] },
+  { url: "commerical_2", photos: [] },
+  { url: "commerical_3", photos: [] },
+  { url: "commerical_4", photos: [] },
+  { url: "commerical_5", photos: [] },
+  { url: "commerical_6", photos: [] }
+];
 
 export const residentionalProjectsLinks = [{}];
 

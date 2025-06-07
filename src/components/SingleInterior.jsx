@@ -9,9 +9,12 @@ import {
 // import Autoplay from "embla-carousel-autoplay"
 import { Separator } from "./ui/separator";
 import PremiumPhoto from "../assets/premium_photo-.avif";
+import { useParams } from "react-router-dom";
 
 // @TODO:- Add Autoplay
 const SingleInterior = () => {
+ const {projectType} =  useParams()
+ console.log(projectType);
   return (
     <div className="w-full h-full">
       <div className="px-4 xl:px-32    py-16 ">

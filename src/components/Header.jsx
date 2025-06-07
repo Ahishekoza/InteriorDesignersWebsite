@@ -72,10 +72,10 @@ const Header = () => {
     return (
       <div className="  w-full bg-dark-green z-20 px-2 md:px-4 lg:px-8  rounded-b-lg">
         <div className="flex  justify-between md:text-lg lg:text-xl  items-center px-2 py-4 rounded-lg text-white ">
-          <span className="font-orbitron  font-extrabold cursor-pointer">
+          <Link to={"/"} className="font-orbitron  font-extrabold cursor-pointer">
             I<span className="inline-block text-red  rotate-6">NN</span>
             OVA
-          </span>
+          </Link>
 
           {/* --- Menu Items */}
           <div className="hidden md:flex items-center gap-9  font-montserrat font-medium">

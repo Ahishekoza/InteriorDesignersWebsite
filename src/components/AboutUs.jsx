@@ -1,4 +1,5 @@
 import PremiumPhoto from "../assets/premium_photo-.avif";
+import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <section id="aboutUs" className="w-full h-full my-16">
@@ -19,19 +20,25 @@ const AboutUs = () => {
               hic iure, incidunt earum magni maxime deleniti non voluptate
               laboriosam voluptatem quasi illum sequi molestias, doloribus
               officia eius odit et ullam harum at voluptatum. Distinctio
-              perspiciatis culpa itaque. 
+              perspiciatis culpa itaque.
             </p>
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               src={PremiumPhoto}
               className="h-full w-full object-cover rounded-md"
             />
           </div>
           <div className="md:w-1/2 w-full flex flex-col gap-3">
-          <img
+            <motion.img
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               src={PremiumPhoto}
               className="hidden md:block h-full w-full object-cover rounded-md"
             />
-          <p >
+            <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Dignissimos quam vero soluta non sequi praesentium ea velit
               similique itaque illum corporis possimus accusamus reprehenderit
@@ -45,7 +52,6 @@ const AboutUs = () => {
               src={PremiumPhoto}
               className="block md:hidden h-full w-full object-cover rounded-md"
             />
-            
           </div>
         </div>
       </div>

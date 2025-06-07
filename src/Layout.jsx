@@ -41,7 +41,7 @@ const RemoteLayout = ({ children }) => {
 
   return (
     <div
-      className="scroll-smooth cursor-grab"
+      className="scroll-smooth cursor-grab overflow-hidden"
       style={{
         y: yOffset, // Apply smooth scroll
       }}
@@ -53,7 +53,7 @@ const RemoteLayout = ({ children }) => {
       {/* --Scroll Button Implementation */}
       <button
         onClick={handleScrollToTop}
-        className="fixed bottom-14 right-1 bg-dark-green hover:bg-dark-green/85 transition-all duration-150 text-white cursor-pointer p-1 rounded-full shadow-md"
+        className="fixed bottom-14 right-1 bg-dark-green hover:bg-mango-orange transition-all duration-150 text-white cursor-pointer p-1 rounded-full shadow-md"
         style={{ display: showScrollArrow ? "block" : "none" }}
       >
         <svg

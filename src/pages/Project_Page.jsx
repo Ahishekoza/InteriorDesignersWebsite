@@ -9,6 +9,8 @@ import {
   CarouselPrevious,
 } from "../components/ui/carousel";
 import CommonCard from "../components/CommonCard";
+import Autoplay from "embla-carousel-autoplay";
+import { commericalProjectsLinks } from "../constants/index.js";
 
 // @TODO:-- Add border none
 // @TODO:- create an array of objects for interior site samples
@@ -23,6 +25,7 @@ import CommonCard from "../components/CommonCard";
 // }
 
 const ProjectPage = () => {
+  console.log(commericalProjectsLinks?.length);
   return (
     <div className="px-4 md:px-6 lg:px-8 py-6 ">
       {/* --Heading */}
@@ -47,6 +50,11 @@ const ProjectPage = () => {
               opts={{
                 align: "start",
               }}
+              plugins={[
+                Autoplay({
+                  delay: 2500,
+                }),
+              ]}
               className="w-full h-full"
             >
               <CarouselContent>
@@ -56,7 +64,7 @@ const ProjectPage = () => {
                     className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
                   >
                     <div className="p-1">
-                      <Link to={"/project/commerical"}>
+                      <Link to={`/project/commerical-${index + 1}`}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
@@ -95,16 +103,21 @@ const ProjectPage = () => {
               opts={{
                 align: "start",
               }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
               className="w-full h-full"
             >
               <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem
-                    key={index}
+                {commericalProjectsLinks?.map((commerical_project) => {
+                  return <CarouselItem
+                    key={commerical_project?.url}
                     className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
                   >
                     <div className="p-1">
-                      <Link to={"/project/commerical"}>
+                      <Link to={`/project/${commerical_project?.url}`} state={{data:commerical_project?.photos}}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
@@ -123,8 +136,8 @@ const ProjectPage = () => {
                         </CommonCard>
                       </Link>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>;
+                })}
               </CarouselContent>
               <div className="absolute md:right-20 right-11 -top-5">
                 <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
@@ -143,6 +156,11 @@ const ProjectPage = () => {
               opts={{
                 align: "start",
               }}
+              plugins={[
+                Autoplay({
+                  delay: 3500,
+                }),
+              ]}
               className="w-full h-full"
             >
               <CarouselContent>
@@ -153,7 +171,10 @@ const ProjectPage = () => {
                   >
                     {/* --Photo Links for the specific Project can be via state Prop in Link */}
                     <div className="p-1">
-                      <Link to={"/project/commerical"} state={{data:["Abhishek","Somesh","Saniya"]}}>
+                      <Link
+                        to={`/project/Hospitality-${index}`}
+                        state={{ data: ["Abhishek", "Somesh", "Saniya"] }}
+                      >
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img

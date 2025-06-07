@@ -5,9 +5,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
-import { Card, CardContent } from "../components/ui/card";
 import PremiumPhoto from "../assets/premium_photo-.avif";
 import CommonCard from "./CommonCard";
+import Autoplay from "embla-carousel-autoplay";
 const Reviews = () => {
   return (
     <section id="#" className="w-full h-full my-16 ">
@@ -23,6 +23,11 @@ const Reviews = () => {
             opts={{
               align: "start",
             }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
             className="w-full h-full"
           >
             <CarouselContent>

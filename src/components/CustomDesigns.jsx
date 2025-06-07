@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
-
+import Autoplay from "embla-carousel-autoplay";
 import { Dialog, DialogContent } from "../components/ui/dialog";
 import { useState } from "react";
 import ReactPlayer from "react-player";
@@ -14,10 +14,11 @@ import { customDesignContentLinks } from "../constants";
 import CommonCard from "./CommonCard";
 
 const CustomDesigns = () => {
+  const [api, setApi] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isCarouselVideoOpen, setIsCarouselVideoOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
-
+  
 
   return (
     <div className="w-full h-full my-16 bg-dark-green">
@@ -36,7 +37,13 @@ const CustomDesigns = () => {
             opts={{
               align: "start",
             }}
+            plugins={[
+              Autoplay({
+                delay: 2500,
+              }),
+            ]}
             className="w-full h-full"
+            setApi={setApi}
           >
             <CarouselContent>
               {customDesignContentLinks.map((video) => (
@@ -46,6 +53,7 @@ const CustomDesigns = () => {
                 >
                   <div className="p-1">
                     {/* Smaller Devices: ReactPlayer within Card */}
+
                     <CommonCard customClass={"block md:hidden"}>
                       <>
                         {isCarouselVideoOpen &&
@@ -131,12 +139,20 @@ const CustomDesigns = () => {
               <CarouselNext className="hover:bg-mango-orange hover:text-white border-none cursor-pointer" />
             </div>
           </Carousel>
-          {/* Dialog for Videos */}
+
+          {/* Dialog for Large Videos */}
           <Dialog
             open={isOpen}
             onOpenChange={(open) => {
               setIsOpen(open);
-              if (!open) setSelectedVideo(null); // Reset video when dialog is closed
+              if (!open) {
+                setTimeout(() => {
+                  api?.plugins()?.autoplay?.play();
+                }, 300);
+                setSelectedVideo(null);
+              } else {
+                api?.plugins()?.autoplay?.pause();
+              } // Reset video when dialog is closed
             }}
             className="hidden md:block"
           >
