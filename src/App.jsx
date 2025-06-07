@@ -4,6 +4,7 @@ import HomePage from "./pages/Home_Page";
 import RemoteLayout from "./Layout";
 import ProjectPage from "./pages/Project_Page";
 import SingleProjectPage from "./pages/SingleProjectPage";
+import { LandingPage } from "./pages/Landing_Page";
 
 function App() {
   const location = useLocation();
@@ -48,51 +49,53 @@ function App() {
             </motion.div>
           }
         /> */}
-        <Route
-          path="/"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              <RemoteLayout>
-                <HomePage />
-              </RemoteLayout>
-            </motion.div>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              <RemoteLayout>
-                <ProjectPage />
-              </RemoteLayout>
-            </motion.div>
-          }
-        />
-        <Route
-          path="/project/:projectType"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              <RemoteLayout>
-                <SingleProjectPage />
-              </RemoteLayout>
-            </motion.div>
-          }
-        />
+        <Route element={<LandingPage/>}>
+          <Route
+            path="/"
+            element={
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <RemoteLayout>
+                  <HomePage />
+                </RemoteLayout>
+              </motion.div>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <RemoteLayout>
+                  <ProjectPage />
+                </RemoteLayout>
+              </motion.div>
+            }
+          />
+          <Route
+            path="/project/:projectType"
+            element={
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <RemoteLayout>
+                  <SingleProjectPage />
+                </RemoteLayout>
+              </motion.div>
+            }
+          />
+        </Route>
       </Routes>
     </AnimatePresence>
   );

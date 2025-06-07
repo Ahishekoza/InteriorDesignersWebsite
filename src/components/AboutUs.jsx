@@ -30,9 +30,9 @@ const AboutUs = () => {
               className="h-full w-full object-cover rounded-md"
             />
           </div>
-          <div className="md:w-1/2 w-full flex flex-col gap-3">
+          <div className="md:w-1/2 w-full flex flex-col gap-3 ">
             <motion.img
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: +100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               src={PremiumPhoto}
@@ -48,7 +48,10 @@ const AboutUs = () => {
               officia eius odit et ullam harum at voluptatum. Distinctio
               perspiciatis culpa itaque.
             </p>
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: +100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               src={PremiumPhoto}
               className="block md:hidden h-full w-full object-cover rounded-md"
             />

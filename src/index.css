@@ -56,6 +56,10 @@ html {
   scrollbar-width: thin; /* Thin scrollbar */
 }
 
+.bg_img{
+  background-image: url("./assets//premium_photo-.avif");
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
