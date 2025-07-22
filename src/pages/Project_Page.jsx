@@ -1,6 +1,8 @@
 import { data, Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import PremiumPhoto from "../assets/premium_photo-.avif";
+import Govinda1 from "../assets/hospitality/govinda1.jpg";
+
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +12,7 @@ import {
 } from "../components/ui/carousel";
 import CommonCard from "../components/CommonCard";
 import Autoplay from "embla-carousel-autoplay";
-import { commericalProjectsLinks } from "../constants/index.js";
+import { commericalProjectsLinks, hospalityProjectsLinks, residentionalProjectsLinks } from "../constants/index.js";
 
 // @TODO:-- Add border none
 // @TODO:- create an array of objects for interior site samples
@@ -51,24 +53,24 @@ const ProjectPage = () => {
                 align: "start",
               }}
               plugins={[
-                Autoplay({
-                  delay: 2500,
-                }),
+                // Autoplay({
+                //   delay: 2500,
+                // }),
               ]}
               className="w-full h-full"
             >
               <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {hospalityProjectsLinks.map((hospitalityProject) => (
                   <CarouselItem
-                    key={index}
-                    className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
+                    key={hospitalityProject?.url}
+                    className="   md:basis-1/3 sm:basis-1/2 "
                   >
                     <div className="p-1">
-                      <Link to={`/project/commerical-${index + 1}`}>
+                      <Link to={`/project/${hospitalityProject?.url}` } state={{ data: hospitalityProject?.photos }}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
-                              src={PremiumPhoto}
+                              src={hospitalityProject?.coverPhoto}
                               className="w-full h-full object-cover rounded-md"
                             />
                             {/* Dark-opacity background on hover */}
@@ -86,7 +88,7 @@ const ProjectPage = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute md:right-20 right-11 -top-5">
+              <div className="absolute md:hidden md:right-20 right-11 -top-5">
                 <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
                 <CarouselNext className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
               </div>
@@ -104,24 +106,24 @@ const ProjectPage = () => {
                 align: "start",
               }}
               plugins={[
-                Autoplay({
-                  delay: 3000,
-                }),
+                // Autoplay({
+                //   delay: 3000,
+                // }),
               ]}
               className="w-full h-full"
             >
               <CarouselContent>
-                {commericalProjectsLinks?.map((commerical_project) => {
+                {residentionalProjectsLinks?.map((commerical_project) => {
                   return <CarouselItem
                     key={commerical_project?.url}
-                    className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
+                    className=" md:basis-1/3 sm:basis-1/2 "
                   >
                     <div className="p-1">
                       <Link to={`/project/${commerical_project?.url}`} state={{data:commerical_project?.photos}}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
-                              src={PremiumPhoto}
+                              src={commerical_project?.coverPhoto}
                               className="w-full h-full object-cover rounded-md"
                             />
                             {/* Dark-opacity background on hover */}
@@ -139,7 +141,7 @@ const ProjectPage = () => {
                   </CarouselItem>;
                 })}
               </CarouselContent>
-              <div className="absolute md:right-20 right-11 -top-5">
+              <div className="absolute md:hidden md:right-20 right-11 -top-5">
                 <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
                 <CarouselNext className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
               </div>
@@ -157,17 +159,17 @@ const ProjectPage = () => {
                 align: "start",
               }}
               plugins={[
-                Autoplay({
-                  delay: 3500,
-                }),
+                // Autoplay({
+                //   delay: 3500,
+                // }),
               ]}
               className="w-full h-full"
             >
               <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {Array.from({ length: 3 }).map((_, index) => (
                   <CarouselItem
                     key={index}
-                    className=" lg:basis-1/4  md:basis-1/3 sm:basis-1/2 "
+                    className="   md:basis-1/3 sm:basis-1/2 "
                   >
                     {/* --Photo Links for the specific Project can be via state Prop in Link */}
                     <div className="p-1">
@@ -196,7 +198,7 @@ const ProjectPage = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute md:right-20 right-11 -top-5">
+              <div className="absolute md:hidden md:right-20 right-11 -top-5">
                 <CarouselPrevious className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
                 <CarouselNext className="hover:bg-mango-orange bg-dark-green text-white hover:text-white border-none cursor-pointer" />
               </div>

@@ -1,4 +1,5 @@
-import PremiumPhoto from "../assets/premium_photo-.avif";
+import Kitchen from "../assets/aboutUs/Kitchen.jpg";
+import DinningHall from "../assets/aboutUs/DinningHall.jpg";
 import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
@@ -17,16 +18,12 @@ const AboutUs = () => {
               Dignissimos quam vero soluta non sequi praesentium ea velit
               similique itaque illum corporis possimus accusamus reprehenderit
               labore recusandae deleniti quae, sint quidem! Voluptatibus amet
-              hic iure, incidunt earum magni maxime deleniti non voluptate
-              laboriosam voluptatem quasi illum sequi molestias, doloribus
-              officia eius odit et ullam harum at voluptatum. Distinctio
-              perspiciatis culpa itaque.
             </p>
             <motion.img
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              src={PremiumPhoto}
+              src={DinningHall}
               className="h-full w-full object-cover rounded-md"
             />
           </div>
@@ -35,7 +32,7 @@ const AboutUs = () => {
               initial={{ opacity: 0, x: +100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              src={PremiumPhoto}
+              src={Kitchen}
               className="hidden md:block h-full w-full object-cover rounded-md"
             />
             <p>
@@ -43,16 +40,12 @@ const AboutUs = () => {
               Dignissimos quam vero soluta non sequi praesentium ea velit
               similique itaque illum corporis possimus accusamus reprehenderit
               labore recusandae deleniti quae, sint quidem! Voluptatibus amet
-              hic iure, incidunt earum magni maxime deleniti non voluptate
-              laboriosam voluptatem quasi illum sequi molestias, doloribus
-              officia eius odit et ullam harum at voluptatum. Distinctio
-              perspiciatis culpa itaque.
             </p>
             <motion.img
               initial={{ opacity: 0, x: +100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              src={PremiumPhoto}
+              src={Kitchen}
               className="block md:hidden h-full w-full object-cover rounded-md"
             />
           </div>

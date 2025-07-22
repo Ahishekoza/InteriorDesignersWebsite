@@ -37,11 +37,11 @@ const CustomDesigns = () => {
             opts={{
               align: "start",
             }}
-            plugins={[
-              Autoplay({
-                delay: 2500,
-              }),
-            ]}
+            // plugins={[
+            //   Autoplay({
+            //     delay: 3000,
+            //   }),
+            // ]}
             className="w-full h-full"
             setApi={setApi}
           >
@@ -156,7 +156,7 @@ const CustomDesigns = () => {
             }}
             className="hidden md:block"
           >
-            <DialogContent className="max-w-[500px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[1000px] h-[50%] xl:h-[80%]">
+            <DialogContent className="max-w-[500px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[1000px] h-[80%]">
               {selectedVideo && (
                 <ReactPlayer
                   url={selectedVideo}

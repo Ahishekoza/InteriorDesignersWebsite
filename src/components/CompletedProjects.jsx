@@ -20,7 +20,7 @@ const CompletedProjects = () => {
   }, []);
 
   return (
-    <section id="#" className="w-full h-full my-16 ">
+    <div className="w-full h-full  my-16">
       <div className="px-4 md:px-6 lg:px-8 py-6 bg-dark-green text-white">
         <div className="flex flex-col md:flex-row w-full md:space-x-5  space-y-3 font-montserrat">
           <div className="w-full md:w-1/2">
@@ -55,7 +55,7 @@ const CompletedProjects = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

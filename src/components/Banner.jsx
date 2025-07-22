@@ -1,4 +1,4 @@
-import PremiumPhoto from "../assets/premium_photo-.avif";
+import PremiumPhoto from "../assets/VideoCapture_20241227-172710.jpg";
 import { Button } from "./ui/button";
 const Banner = () => {
   const handleScrollToContact = () => {

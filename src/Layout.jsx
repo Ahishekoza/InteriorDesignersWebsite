@@ -41,7 +41,7 @@ const RemoteLayout = ({ children }) => {
 
   return (
     <div
-      className="scroll-smooth cursor-grab overflow-hidden"
+      className="scroll-smooth  overflow-hidden"
       style={{
         y: yOffset, // Apply smooth scroll
       }}

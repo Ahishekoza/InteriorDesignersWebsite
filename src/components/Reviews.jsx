@@ -10,7 +10,7 @@ import CommonCard from "./CommonCard";
 import Autoplay from "embla-carousel-autoplay";
 const Reviews = () => {
   return (
-    <section id="#" className="w-full h-full my-16 ">
+    <div  className="w-full h-full my-16  ">
       <div className="px-4 md:px-6 lg:px-8 py-6 ">
         {/* Heading */}
         <div className=" font-orbitron items-start text-4xl text-dark-green md:text-6xl md:mb-16 mb-9">
@@ -72,7 +72,7 @@ const Reviews = () => {
           </Carousel>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
