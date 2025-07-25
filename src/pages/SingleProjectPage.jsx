@@ -3,9 +3,10 @@ import SingleInterior from '../components/SingleInterior'
 
 const SingleProjectPage = () => {
  const location =  useLocation()
- console.log(location?.state?.data);
+ console.log(location)
+ const imagesAndThumbnails = location?.state?.data;
   return (
-    <SingleInterior/>
+    <SingleInterior imagesInfo={imagesAndThumbnails}/>
   )
 }
 

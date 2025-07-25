@@ -60,17 +60,17 @@ const ProjectPage = () => {
               className="w-full h-full"
             >
               <CarouselContent>
-                {hospalityProjectsLinks.map((hospitalityProject) => (
+                {commericalProjectsLinks.map((commericalProject) => (
                   <CarouselItem
-                    key={hospitalityProject?.url}
+                    key={commericalProject?.url}
                     className="   md:basis-1/3 sm:basis-1/2 "
                   >
                     <div className="p-1">
-                      <Link to={`/project/${hospitalityProject?.url}` } state={{ data: hospitalityProject?.photos }}>
+                      <Link to={`/project/${commericalProject?.url}` } state={{ data: commericalProject?.photos }}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
-                              src={hospitalityProject?.coverPhoto}
+                              src={commericalProject?.coverPhoto}
                               className="w-full h-full object-cover rounded-md"
                             />
                             {/* Dark-opacity background on hover */}
@@ -113,17 +113,17 @@ const ProjectPage = () => {
               className="w-full h-full"
             >
               <CarouselContent>
-                {residentionalProjectsLinks?.map((commerical_project) => {
+                {residentionalProjectsLinks?.map((residentionalProject) => {
                   return <CarouselItem
-                    key={commerical_project?.url}
+                    key={residentionalProject?.url}
                     className=" md:basis-1/3 sm:basis-1/2 "
                   >
                     <div className="p-1">
-                      <Link to={`/project/${commerical_project?.url}`} state={{data:commerical_project?.photos}}>
+                      <Link to={`/project/${residentionalProject?.url}`} state={{data:residentionalProject?.photos}}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
-                              src={commerical_project?.coverPhoto}
+                              src={residentionalProject?.coverPhoto}
                               className="w-full h-full object-cover rounded-md"
                             />
                             {/* Dark-opacity background on hover */}
@@ -165,22 +165,18 @@ const ProjectPage = () => {
               ]}
               className="w-full h-full"
             >
-              <CarouselContent>
-                {Array.from({ length: 3 }).map((_, index) => (
+                 <CarouselContent>
+                {hospalityProjectsLinks.map((hospitalityProject) => (
                   <CarouselItem
-                    key={index}
+                    key={hospitalityProject?.url}
                     className="   md:basis-1/3 sm:basis-1/2 "
                   >
-                    {/* --Photo Links for the specific Project can be via state Prop in Link */}
                     <div className="p-1">
-                      <Link
-                        to={`/project/Hospitality-${index}`}
-                        state={{ data: ["Abhishek", "Somesh", "Saniya"] }}
-                      >
+                      <Link to={`/project/${hospitalityProject?.url}` } state={{ data: hospitalityProject?.photos }}>
                         <CommonCard>
                           <div className="relative overflow-hidden  w-full h-full group">
                             <img
-                              src={PremiumPhoto}
+                              src={hospitalityProject?.coverPhoto}
                               className="w-full h-full object-cover rounded-md"
                             />
                             {/* Dark-opacity background on hover */}

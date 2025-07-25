@@ -15,14 +15,14 @@ import Shaikh6 from "../assets/residential/shaikh6.png";
 import Shaikh1 from "../assets/residential/shaikh1.png";
 import Shaikh3 from "../assets/residential/shaikh3.png";
 import Shaikh4 from "../assets/residential/shaikh4.png";
-import Shaikh5 from "../assets/residential/shaikh5.png"
+import Shaikh5 from "../assets/residential/shaikh5.png";
 import Shaikh2 from "../assets/residential/shaikh2.png";
 import Shaikh7 from "../assets/residential/shaikh7.png";
 // -----
 import Daga1 from "../assets/residential/daga1.jpg";
 import Daga2 from "../assets/residential/daga2.jpg";
 import Daga3 from "../assets/residential/daga3.jpg";
-import Daga4 from "../assets/residential/daga4.jpg";  
+import Daga4 from "../assets/residential/daga4.jpg";
 import Daga5 from "../assets/residential/daga5.jpg";
 import Daga6 from "../assets/residential/daga6.jpg";
 import Daga7 from "../assets/residential/daga7.jpg";
@@ -35,7 +35,6 @@ import Chenani4 from "../assets/residential/chenani4.png";
 import Chenani5 from "../assets/residential/chenani5.png";
 import Chenani6 from "../assets/residential/chenani6.png";
 import Chenani7 from "../assets/residential/chenani7.png";
-
 
 export const customDesignContentLinks = [
   {
@@ -67,26 +66,51 @@ export const customDesignContentLinks = [
 ];
 
 export const commericalProjectsLinks = [
-  { url: "commerical_1", photos: [] },
-  { url: "commerical_2", photos: [] },
-  { url: "commerical_3", photos: [] },
+  {
+    url: "commerical_1",
+    coverPhoto: Carousel3,
+    photos: ["https://youtube.com/shorts/D42gMZy-eYY?si=n74lOwqfQAFZcjUQ"],
+  },
+  // { url: "commerical_2", photos: [] },
+  // { url: "commerical_3", photos: [] },
 ];
 
 export const residentionalProjectsLinks = [
   {
     url: "residential_1",
     coverPhoto: Shaikh6,
-    photos: [Shaikh1, Shaikh2, Shaikh3, Shaikh4, Shaikh5, Shaikh7],
+    photos: [
+      { roomName: "Hall", image: Shaikh4 },
+      { roomName: "Decent Wall", image: Shaikh3 },
+      { roomName: "Dinning Room", image: Shaikh1 },
+      { roomName: "Kitchen", image: Shaikh2 },
+      { roomName: "Wash Basin", image: Shaikh5 },
+      { roomName: "Bedroom", image: Shaikh7 },
+    ],
   },
   {
     url: "residential_2",
     coverPhoto: Daga1,
-    photos: [Daga7,Daga2, Daga3, Daga4, Daga5, Daga6],
+    photos: [
+      { roomName: "Enterance", image: Daga7 },
+      { roomName: "TV Unit", image: Daga2 },
+      { roomName: "Dinning Room", image: Daga3 },
+      { roomName: "Master Bedroom", image: Daga4 },
+      { roomName: "Bedroom TV unit", image: Daga5 },
+      { roomName: "Queen Bedroom ", image: Daga6 },
+    ],
   },
   {
     url: "residential_3",
     coverPhoto: Chenani1,
-    photos: [Chenani2, Chenani3, Chenani4, Chenani5, Chenani6, Chenani7],
+    photos: [
+      { roomName: "Main Hall", image: Chenani2 },
+      { roomName: "Terrace", image: Chenani3 },
+      { roomName: "Dinning Room", image: Chenani4 },
+      { roomName: "Modular Kitchen", image: Chenani5 },
+      { roomName: "Theater Room", image: Chenani6 },
+      { roomName: "Master Bedroom", image: Chenani7 },
+    ],
   },
 ];
 
